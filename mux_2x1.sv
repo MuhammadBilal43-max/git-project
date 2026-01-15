@@ -1,10 +1,8 @@
-module mux_2x1 #(
-    parameter WIDTH = 1       // Width of the data inputs
-)(
-    input  logic [WIDTH-1:0] a,   // Input A
-    input  logic [WIDTH-1:0] b,   // Input B
-    input  logic             sel, // Select signal
-    output logic [WIDTH-1:0] y    // Output
+module mux_2x1 (
+    input  logic  a,   // Input A
+    input  logic  b,   // Input B
+    input  logic  sel, // Select signal
+    output logic  y    // Output
 )
     always_comb begin
         // Implemented with unique case
@@ -17,16 +15,17 @@ endmodule
 
 module mux_2x1_tb;
 
- 
+    // Parameter for data width
+    parameter WIDTH = 1; // Change this to test different widths
 
     // Testbench signals
-    logic  a;
-    logic  b;
-    logic  sel;
-    logic y;
+    logic [WIDTH-1:0] a;
+    logic [WIDTH-1:0] b;
+    logic             sel;
+    logic [WIDTH-1:0] y;
 
     // Instantiate the DUT (Device Under Test)
-    mux_2x1 dut (
+    mux_2x1 #(.WIDTH(WIDTH)) dut (
         .a(a),
         .b(b),
         .sel(sel),
