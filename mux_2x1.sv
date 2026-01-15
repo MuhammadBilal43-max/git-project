@@ -58,3 +58,18 @@ module mux_2x1_tb;
 endmodule
 
 I have added demux design
+=======
+// demux_1x2.sv
+module demux_1x2 (
+    input  logic din,   // Data input
+    input  logic sel,   // Select signal
+    output logic y0,    // Output 0
+    output logic y1     // Output 1
+);
+
+    // Demux logic using assign
+    assign y0 = (sel == 0) ? din : 1'b0;
+    assign y1 = (sel == 1) ? din : 1'b0;
+
+endmodule
+
