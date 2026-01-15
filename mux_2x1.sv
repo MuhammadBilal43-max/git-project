@@ -79,3 +79,4 @@ I want to add encoder functionaliy
 
 Added another functionality related to design 
 Added testbench to this functionality
+Original functionality
