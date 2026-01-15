@@ -1,4 +1,6 @@
-module mux_2x1 (
+module mux_2x1# (
+ Parameter WIDTH=2
+)(
     input  logic  [WIDTH-1:0] a,   // Input A
     input  logic  [WIDTH-1:0] b,   // Input B
     input  logic  sel, // Select signal
