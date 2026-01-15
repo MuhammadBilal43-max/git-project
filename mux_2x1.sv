@@ -1,8 +1,8 @@
 module mux_2x1 (
-    input  logic  a,   // Input A
-    input  logic  b,   // Input B
+    input  logic  [WIDTH-1:0] a,   // Input A
+    input  logic  [WIDTH-1:0] b,   // Input B
     input  logic  sel, // Select signal
-    output logic  y    // Output
+    output logic  [WIDTH-1:0] y    // Output
 )
     always_comb begin
         // Implemented with unique case
