@@ -4,9 +4,11 @@ module mux_2x1 (
     input  logic sel,
     output logic y
 );
-    // Implemented with unique case
-    unique case (sel)
-        0: y = b;
-        1: y = a;
-    endcase
+    always_comb begin
+        // Implemented with unique case
+        unique case (sel)
+            0: y = b;
+            1: y = a;
+        endcase
+    end
 endmodule
