@@ -58,7 +58,7 @@ module mux_2x1_tb;
 endmodule
 
 I have added demux design
-=======
+
 // demux_1x2.sv
 module demux_1x2 (
     input  logic din,   // Data input
@@ -75,3 +75,5 @@ endmodule
 
 Now I want to add Decoder functionality
 I want to add encoder testbench  functionaliy
+I want to add encoder functionaliy
+
