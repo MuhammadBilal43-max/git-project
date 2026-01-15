@@ -77,3 +77,4 @@ Now I want to add Decoder functionality
 I want to add encoder testbench  functionaliy
 I want to add encoder functionaliy
 
+Added another functionality related to design 
