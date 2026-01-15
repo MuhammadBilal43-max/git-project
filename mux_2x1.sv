@@ -4,7 +4,9 @@ module mux_2x1 (
     input  logic sel,
     output logic y
 );
-
-    assign y = sel ? b : a;
-
+    // Implemented with unique case
+    unique case (sel)
+        0: y = b;
+        1: y = a;
+    endcase
 endmodule
