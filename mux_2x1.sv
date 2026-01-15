@@ -73,3 +73,4 @@ module demux_1x2 (
 
 endmodule
 
+Now I want to add Decoder functionality
