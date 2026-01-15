@@ -79,4 +79,7 @@ I want to add encoder functionaliy
 
 Added another functionality related to design 
 Added testbench to this functionality
+<<<<<<< Updated upstream
 Original functionality
+=======
+>>>>>>> Stashed changes
