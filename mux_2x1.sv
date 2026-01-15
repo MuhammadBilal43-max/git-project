@@ -1,9 +1,11 @@
-module mux_2x1 (
-    input  logic a,
-    input  logic b,
-    input  logic sel,
-    output logic y
-);
+module mux_2x1 #(
+    parameter WIDTH = 1       // Width of the data inputs
+)(
+    input  logic [WIDTH-1:0] a,   // Input A
+    input  logic [WIDTH-1:0] b,   // Input B
+    input  logic             sel, // Select signal
+    output logic [WIDTH-1:0] y    // Output
+)
     always_comb begin
         // Implemented with unique case
         unique case (sel)
@@ -13,12 +15,14 @@ module mux_2x1 (
     end
 endmodule
 
-module tb_mux_2x1;
+module mux_2x1_tb;
+
+ 
 
     // Testbench signals
-    logic a;
-    logic b;
-    logic sel;
+    logic  a;
+    logic  b;
+    logic  sel;
     logic y;
 
     // Instantiate the DUT (Device Under Test)
@@ -28,6 +32,7 @@ module tb_mux_2x1;
         .sel(sel),
         .y(y)
     );
+
 
     // Test procedure
     initial begin
